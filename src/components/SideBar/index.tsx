@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "./index.module.css";
-import { ExternalLink } from "@/components/ExternalLink";
+import { Link } from "@/components/Link";
 import { Profile } from "@/components/Profile";
 import { WorkExperience } from '../WorkExperience';
 
@@ -10,16 +10,21 @@ export function SideBar() {
     <aside className={styles.sidebar}>
       <Profile />
       <div className={styles.socialMedia}>
-        <ExternalLink
-          link="https://www.linkedin.com/in/camisbrussi/"
+        <Link
+          to="https://www.linkedin.com/in/camisbrussi/"
           title="Linkedin"
+          isExternal
         />
-        <ExternalLink link="https://github.com/camisbrussi" title="GitHub" />
-        <ExternalLink link="#" title="Instagram" />
+        <Link to="https://github.com/camisbrussi" title="GitHub" isExternal />
+        <Link to="#" title="Instagram" isExternal />
       </div>
       <div className={styles.workExperience}>
         <span>Experiência</span>
-        <WorkExperience rule="Sofware Enginner" year='2023' company='Mercado Livre'/>
+        <WorkExperience
+          rule="Sofware Enginner"
+          year="2023"
+          company="Mercado Livre"
+        />
       </div>
     </aside>
   );

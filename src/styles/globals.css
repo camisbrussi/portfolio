@@ -8,13 +8,18 @@ body {
   background-color: 	#181818;
   color: #DCDCDC;
   -webkit-font-smoothing: 'antialiased';
+  max-width: calc(100vw - (100vw - 1160px) / 2);
+  margin-left: auto;
+  height: 100vh;
+  padding: 80px 0;
 }
 
 body, input, textarea, button {
-    font-family: 'Roboto';
-    font-weight: 400;
+  font-family: 'Roboto';
+  font-weight: 400;
 }
 
 a {
   color: #DCDCDC;
+  text-decoration: none;
 }
